@@ -1,11 +1,11 @@
 <template>
-    <Layout> Welcome {{ name }} </Layout>
+    <div>Welcome {{ name }}</div>
 </template>
 
 <script>
 import Layout from "../Shared/Layout.vue";
 export default {
-    components: { Layout },
+    layout: Layout,
     props: {
         name: {
             type: String,
