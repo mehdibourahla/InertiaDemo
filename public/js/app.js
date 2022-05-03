@@ -2163,10 +2163,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     Link: _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_0__.Link
+  },
+  data: function data() {
+    return {
+      fakeData: ["one", "two", "three"]
+    };
   }
 });
 
@@ -8645,6 +8659,25 @@ var render = function () {
         _c(
           "li",
           [_c("Link", { attrs: { href: "/users" } }, [_vm._v("Users")])],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c(
+              "Link",
+              {
+                attrs: {
+                  method: "post",
+                  data: _vm.fakeData,
+                  as: "button",
+                  href: "/logout",
+                },
+              },
+              [_vm._v("Logout")]
+            ),
+          ],
           1
         ),
       ]),

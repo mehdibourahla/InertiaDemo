@@ -16,3 +16,7 @@ Route::get('/users', function () {
         'name' => 'Taylor',
     ]);
 });
+
+Route::post('/logout', function () {
+    dd('logout', request()->all());
+});
