@@ -1,6 +1,6 @@
 <template>
     <div>
-        Welcome {{ name }}
+        Plenty of users
         <Nav></Nav>
     </div>
 </template>
@@ -9,12 +9,6 @@
 import Nav from "../Shared/Nav.vue";
 export default {
     components: { Nav },
-    props: {
-        name: {
-            type: String,
-            required: true,
-        },
-    },
 };
 </script>
 
