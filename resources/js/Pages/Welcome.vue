@@ -1,14 +1,11 @@
 <template>
-    <div>
-        Welcome {{ name }}
-        <Nav></Nav>
-    </div>
+    <Layout> Welcome {{ name }} </Layout>
 </template>
 
 <script>
-import Nav from "../Shared/Nav.vue";
+import Layout from "../Shared/Layout.vue";
 export default {
-    components: { Nav },
+    components: { Layout },
     props: {
         name: {
             type: String,

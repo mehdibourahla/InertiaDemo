@@ -7,7 +7,7 @@
                 <li>
                     <Link
                         method="post"
-                        :data="fakeData"
+                        :data="{ data: fakeData }"
                         as="button"
                         href="/logout"
                         >Logout</Link

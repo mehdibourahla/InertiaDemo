@@ -1,18 +1,17 @@
 <template>
-    <div>
+    <Layout>
         Plenty of users
-        <Nav></Nav>
 
         <div style="margin-top: 400px">
             <Link preserveScroll as="button"> Refresh</Link>
             {{ time }}
         </div>
-    </div>
+    </Layout>
 </template>
 
 <script>
-import Nav from "../Shared/Nav.vue";
 import { Link } from "@inertiajs/inertia-vue";
+import Layout from "../Shared/Layout.vue";
 
 export default {
     props: {
@@ -21,7 +20,7 @@ export default {
             default: "",
         },
     },
-    components: { Nav, Link },
+    components: { Link, Layout },
 };
 </script>
 
