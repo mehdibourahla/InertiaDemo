@@ -1,5 +1,8 @@
 <template>
     <div>
+        <Head>
+            <title>Users</title>
+        </Head>
         Plenty of users
 
         <div style="margin-top: 400px">

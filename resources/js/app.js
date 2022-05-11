@@ -3,6 +3,7 @@ import { createInertiaApp, Head, Link } from "@inertiajs/inertia-vue";
 
 createInertiaApp({
     resolve: async (name) => (await import(`./Pages/${name}`)).default,
+    title: (title) => "My app | " + title,
     setup({ el, App, props, plugin }) {
         Vue.use(plugin);
         Vue.component("Link", Link);
