@@ -10,12 +10,10 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue";
 import Layout from "../Shared/Layout.vue";
 
 export default {
     layout: Layout,
-    components: { Link },
     props: {
         time: {
             type: String,

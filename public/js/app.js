@@ -53,6 +53,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         props = _ref.props,
         plugin = _ref.plugin;
     vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(plugin);
+    vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("Link", _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__.Link);
+    vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("Head", _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__.Head);
     new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
       render: function render(h) {
         return h(App, props);
