@@ -5,10 +5,11 @@
         </Head>
         Plenty of users
 
-        <div style="margin-top: 400px">
-            <Link preserveScroll as="button"> Refresh</Link>
-            {{ time }}
-        </div>
+        <ul>
+            <li v-for="user in users" :key="user.id">
+                {{ user.name }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -18,9 +19,9 @@ import Layout from "../Shared/Layout.vue";
 export default {
     layout: Layout,
     props: {
-        time: {
-            type: String,
-            default: "",
+        users: {
+            type: Array,
+            default: () => [],
         },
     },
 };
