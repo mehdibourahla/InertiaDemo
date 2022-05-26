@@ -47,6 +47,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
     return resolve;
   }(),
+  title: function title(_title) {
+    return "My app | " + _title;
+  },
   setup: function setup(_ref) {
     var el = _ref.el,
         App = _ref.App,
@@ -85,15 +88,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./Users": [
-		"./resources/js/Pages/Users.vue",
+	"./Users/Create": [
+		"./resources/js/Pages/Users/Create.vue",
 		"/js/vendor",
-		"resources_js_Pages_Users_vue"
+		"resources_js_Pages_Users_Create_vue"
 	],
-	"./Users.vue": [
-		"./resources/js/Pages/Users.vue",
+	"./Users/Create.vue": [
+		"./resources/js/Pages/Users/Create.vue",
 		"/js/vendor",
-		"resources_js_Pages_Users_vue"
+		"resources_js_Pages_Users_Create_vue"
+	],
+	"./Users/Index": [
+		"./resources/js/Pages/Users/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_Users_Index_vue"
+	],
+	"./Users/Index.vue": [
+		"./resources/js/Pages/Users/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_Users_Index_vue"
 	],
 	"./Welcome": [
 		"./resources/js/Pages/Welcome.vue",

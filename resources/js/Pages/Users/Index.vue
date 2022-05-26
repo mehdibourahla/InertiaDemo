@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import Layout from "../Shared/Layout.vue";
-import Pagination from "../Shared/Pagination.vue";
+import Layout from "../../Shared/Layout.vue";
+import Pagination from "../../Shared/Pagination.vue";
 import { Inertia } from "@inertiajs/inertia";
 
 export default {
