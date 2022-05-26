@@ -2,7 +2,6 @@
     <div>
         <Head title="Page" />
         <Nav></Nav>
-        Hi {{ username }}
         <slot />
     </div>
 </template>

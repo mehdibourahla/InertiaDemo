@@ -6,6 +6,7 @@
         <h2>Plenty of users</h2>
 
         <input type="text" placeholder="Search..." v-model="search" />
+        <Link href="/users/create">New User</Link>
 
         <ul>
             <li v-for="user in users.data" :key="user.id">

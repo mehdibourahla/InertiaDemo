@@ -16,6 +16,7 @@
                     class="form-control"
                 />
             </div>
+            <div v-if="form.errors.name" v-text="form.errors.name"></div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input
@@ -44,24 +45,23 @@
 </template>
 
 <script>
-import { Inertia } from "@inertiajs/inertia";
 import Layout from "../../Shared/Layout.vue";
 export default {
     layout: Layout,
 
     data() {
         return {
-            form: {
-                name: "",
-                email: "",
-                password: "",
-            },
+            form: this.$inertia.form({
+                email: null,
+                password: null,
+                name: null,
+            }),
         };
     },
 
     methods: {
         submit() {
-            Inertia.post("/users", this.form);
+            this.form.post("/users");
         },
     },
 };
