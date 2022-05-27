@@ -21,6 +21,7 @@
 import Layout from "../../Shared/Layout.vue";
 import Pagination from "../../Shared/Pagination.vue";
 import { Inertia } from "@inertiajs/inertia";
+import { debounce } from "lodash";
 
 export default {
     components: { Pagination },
@@ -44,18 +45,26 @@ export default {
         };
     },
 
-    watch: {
-        search() {
+    methods: {
+        searchUsers(keyword) {
             Inertia.get(
                 "/users",
                 {
-                    search: this.search,
+                    search: keyword,
                 },
                 {
                     preserveState: true,
                     replace: true,
                 }
             );
+        },
+    },
+
+    watch: {
+        search: {
+            handler: debounce(function (keyword) {
+                this.searchUsers(keyword);
+            }, 500),
         },
     },
 };
