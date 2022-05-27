@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>Hi {{ username }}!</h1>
         <Head title="Page" />
         <Nav></Nav>
         <slot />

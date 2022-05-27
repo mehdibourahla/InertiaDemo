@@ -5,13 +5,7 @@
                 <li><Link href="/">Welcome</Link></li>
                 <li><Link href="/users">Users</Link></li>
                 <li>
-                    <Link
-                        method="post"
-                        :data="{ data: fakeData }"
-                        as="button"
-                        href="/logout"
-                        >Logout</Link
-                    >
+                    <Link method="post" href="/logout">Logout</Link>
                 </li>
             </ul>
         </nav>
