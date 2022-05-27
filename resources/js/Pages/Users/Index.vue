@@ -6,7 +6,7 @@
         <h2>Plenty of users</h2>
 
         <input type="text" placeholder="Search..." v-model="search" />
-        <Link href="/users/create">New User</Link>
+        <Link v-if="can.createUser" href="/users/create">New User</Link>
 
         <ul>
             <li v-for="user in users.data" :key="user.id">
@@ -34,6 +34,10 @@ export default {
             default: null,
         },
         filters: {
+            type: Object,
+            default: null,
+        },
+        can: {
             type: Object,
             default: null,
         },

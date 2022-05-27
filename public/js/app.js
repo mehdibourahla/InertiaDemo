@@ -193,6 +193,10 @@ __webpack_require__.r(__webpack_exports__);
     filters: {
       type: Object,
       "default": null
+    },
+    can: {
+      type: Object,
+      "default": null
     }
   },
   data: function data() {
@@ -1242,7 +1246,9 @@ var render = function () {
         },
       }),
       _vm._v(" "),
-      _c("Link", { attrs: { href: "/users/create" } }, [_vm._v("New User")]),
+      _vm.can.createUser
+        ? _c("Link", { attrs: { href: "/users/create" } }, [_vm._v("New User")])
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "ul",
